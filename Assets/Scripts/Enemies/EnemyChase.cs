@@ -5,24 +5,33 @@ public class EnemyChase : MonoBehaviour, IEnemyChase
     [SerializeField] private float chaseSpeed = 4f;
     private EnemyAttack enemyAttack;
     private Enemy enemy;
+    private Vector3 originalPosition;
 
     void Start()
     {
         enemy = GetComponentInParent<Enemy>();
-        enemyAttack = enemy.GetComponentInChildren<EnemyAttack>(); // §µ§Ò§Ö§â§Ö§Þ §Ú§ß§ä§Ö§â§æ§Ö§Û§ã §Ú §Ú§ã§á§à§Ý§î§Ù§å§Ö§Þ §Ü§à§ß§Ü§â§Ö§ä§ß§í§Û §ä§Ú§á
+        enemyAttack = enemy.GetComponentInChildren<EnemyAttack>();
         if (enemyAttack == null) Debug.LogError("Missing EnemyAttack component on Enemy");
+        originalPosition = transform.parent.position; // §³§à§ç§â§Ñ§ß§ñ§Ö§Þ §ß§Ñ§é§Ñ§Ý§î§ß§å§ð §á§à§Ù§Ú§è§Ú§ð
     }
+
+    public Vector3 OriginalPosition => originalPosition; // §²§Ö§Ñ§Ý§Ú§Ù§å§Ö§Þ §ã§Ó§à§Û§ã§ä§Ó§à OriginalPosition
 
     public void ChasePlayer(Transform player)
     {
-        // §¥§Ó§Ú§Ô§Ñ§Ö§Þ §â§à§Õ§Ú§ä§Ö§Ý§î§ã§Ü§Ú§Û §à§Ò§ì§Ö§Ü§ä §ã §á§à§ã§ä§à§ñ§ß§ß§à§Û §ã§Ü§à§â§à§ã§ä§î§ð
         Vector3 currentPosition = transform.parent.position;
         Vector3 targetPosition = new Vector3(player.position.x, currentPosition.y, currentPosition.z);
-
         float directionX = targetPosition.x - currentPosition.x;
         enemy.CheckAndFlip(directionX);
-
         transform.parent.position = Vector2.MoveTowards(currentPosition, targetPosition, chaseSpeed * Time.deltaTime);
+    }
+
+    public void ReturnToPatrol()
+    {
+        Vector3 currentPosition = transform.parent.position;
+        float directionX = originalPosition.x - currentPosition.x;
+        enemy.CheckAndFlip(directionX);
+        transform.parent.position = Vector2.MoveTowards(currentPosition, originalPosition, chaseSpeed * Time.deltaTime);
     }
 
     public void EnterState(Enemy enemy)
@@ -34,7 +43,11 @@ public class EnemyChase : MonoBehaviour, IEnemyChase
     {
         if (Vector3.Distance(transform.parent.position, enemy.Player.position) > enemy.LoseRange)
         {
-            enemy.SetState(new PatrolState());
+            ReturnToPatrol();
+            if (Vector3.Distance(transform.parent.position, originalPosition) < 0.1f)
+            {
+                enemy.SetState(new PatrolState());
+            }
         }
         else
         {
