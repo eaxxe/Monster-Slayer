@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Movement : MonoBehaviour, IMovement
@@ -6,6 +7,8 @@ public class Movement : MonoBehaviour, IMovement
     [SerializeField] private float speed = 6f;
     [SerializeField] private float slideSpeed = 15f;
     private bool facingRight = true;
+    private bool isMoving = false;
+    public event Action<bool> IsRunning;
 
     void Start()
     {
@@ -19,8 +22,19 @@ public class Movement : MonoBehaviour, IMovement
     public void HandleMovement()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        if (moveInput > 0 && !facingRight) Flip();
-        else if (moveInput < 0 && facingRight) Flip();
+        bool isCurrentlyMoving = moveInput != 0;
+
+        if (isCurrentlyMoving != isMoving)
+        {
+            isMoving = isCurrentlyMoving;
+            IsRunning?.Invoke(isMoving);
+        }
+
+        if (isCurrentlyMoving)
+        {
+            if (moveInput > 0 && !facingRight) Flip();
+            else if (moveInput < 0 && facingRight) Flip();
+        }
 
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.LeftShift)) Slide();

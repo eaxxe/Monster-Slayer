@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Attack : MonoBehaviour, IAttack
@@ -6,11 +7,14 @@ public class Attack : MonoBehaviour, IAttack
     [SerializeField] private float attackRange = 1f;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask enemyLayers;
-    [SerializeField] private float attackCooldown = 1f; // §£§â§Ö§Þ§ñ §Ù§Ñ§Õ§Ö§â§Ø§Ü§Ú §Þ§Ö§Ø§Õ§å §Ñ§ä§Ñ§Ü§Ñ§Þ§Ú
+    [SerializeField] private float attackCooldown = 0.4f;
+    public event Action<int> Attacked;
     private float nextAttackTime = 0f;
+    private System.Random _random = new System.Random();
 
     void Start()
     {
+
         attackPoint = transform.parent.Find("PlayerScripts/AttackPoint");
         if (attackPoint == null)
         {
@@ -22,6 +26,7 @@ public class Attack : MonoBehaviour, IAttack
     {
         if (Time.time >= nextAttackTime && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            Attacked?.Invoke(_random.Next(1,4));
             Debug.Log("attack");
             AttackEnemy();
             nextAttackTime = Time.time + attackCooldown; // §µ§ã§ä§Ñ§ß§Ñ§Ó§Ý§Ú§Ó§Ñ§Ö§Þ §Ó§â§Ö§Þ§ñ §Õ§Ý§ñ §ã§Ý§Ö§Õ§å§ð§ë§Ö§Û §Ñ§ä§Ñ§Ü§Ú

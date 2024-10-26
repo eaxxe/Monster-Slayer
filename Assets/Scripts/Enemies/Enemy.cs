@@ -8,42 +8,49 @@ public class Enemy : MonoBehaviour
         get { return _patrolPoints; }
         set { _patrolPoints = value; }
     }
+
     [SerializeField] private float _patrolSpeed = 2f;
     public float PatrolSpeed
     {
         get { return _patrolSpeed; }
         private set { _patrolSpeed = value; }
     }
+
     [SerializeField] private float _detectionRange = 6f;
     public float DetectionRange
     {
         get { return _detectionRange; }
         private set { _detectionRange = value; }
     }
+
     [SerializeField] private float _loseRange = 7f;
     public float LoseRange
     {
         get { return _loseRange; }
         private set { _loseRange = value; }
     }
+
     [SerializeField] private int _health = 100;
     public int Health
     {
         get { return _health; }
         private set { _health = value; }
     }
+
     [SerializeField] private float _chaseSpeed = 4f;
     public float ChaseSpeed
     {
         get { return _chaseSpeed; }
         private set { _chaseSpeed = value; }
     }
+
     private Transform player;
     public Transform Player
     {
         get { return player; }
         private set { player = value; }
     }
+
     private IEnemyPatrol patrol;
     private IEnemyChase chase;
     private EnemyAttack attack;
@@ -57,7 +64,7 @@ public class Enemy : MonoBehaviour
         chase = GetComponentInChildren<IEnemyChase>();
         if (chase == null) Debug.LogError("Missing IEnemyChase component on Enemy");
 
-        attack = GetComponentInChildren<EnemyAttack>(); // §±§â§à§Ó§Ö§â§ñ§Ö§Þ §Ü§à§Þ§á§à§ß§Ö§ß§ä EnemyAttack
+        attack = GetComponentInChildren<EnemyAttack>();
         if (attack == null) Debug.LogError("Missing EnemyAttack component on Enemy");
 
         Player = GameObject.FindGameObjectWithTag("Player")?.transform;
@@ -97,20 +104,20 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        // §µ§ß§Ú§é§ä§à§Ø§Ñ§Ö§Þ §Ó§Ö§ã§î §à§Ò§ì§Ö§Ü§ä §Ó§â§Ñ§Ô§Ñ §Ó§Þ§Ö§ã§ä§Ö §ã §Õ§à§é§Ö§â§ß§Ú§Þ§Ú §à§Ò§ì§Ö§Ü§ä§Ñ§Þ§Ú
         Destroy(transform.root.gameObject);
     }
 
     public void Flip()
     {
-        Vector3 scaler = transform.localScale;
+        Transform rootTransform = transform.root;
+        Vector3 scaler = rootTransform.localScale;
         scaler.x *= -1;
-        transform.localScale = scaler;
+        rootTransform.localScale = scaler;
     }
 
     public void CheckAndFlip(float directionX)
     {
-        if ((transform.localScale.x > 0 && directionX < 0) || (transform.localScale.x < 0 && directionX > 0))
+        if ((transform.root.localScale.x > 0 && directionX < 0) || (transform.root.localScale.x < 0 && directionX > 0))
         {
             Flip();
         }

@@ -1,3 +1,5 @@
+using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
@@ -5,7 +7,8 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private int damage = 20;
     [SerializeField] private float attackCooldown = 2f;
     private float lastAttackTime;
-
+    private System.Random _random;
+    public event Action<int> OnAttack;
     private PlayerHealth playerHealth;
 
     private void Start()
@@ -20,6 +23,7 @@ public class EnemyAttack : MonoBehaviour
         {
             collider.isTrigger = true;
         }
+        _random = new System.Random();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,6 +44,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (Time.time - lastAttackTime >= attackCooldown)
             {
+                OnAttack?.Invoke(_random.Next(1, 3));
                 AttackPlayer();
             }
         }
