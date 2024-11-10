@@ -3,9 +3,10 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     private Movement _movement;
-    private Jump _jump;
+    private VariableJump _jump;
     private Attack _attack;
     private Animator _animator;
+    private PlayerDeathManager _deathManager;
     private const string _IS_RUNNING = "IsRunning";
     private const string _IS_JUMP = "IsJump";
 
@@ -15,18 +16,21 @@ public class PlayerAnimation : MonoBehaviour
         _movement = FindAnyObjectByType<Movement>();
         if (_movement != null)
             _movement.IsRunning += PlayerIsRunning;
-        _jump = FindAnyObjectByType<Jump>();
+        _jump = FindAnyObjectByType<VariableJump>();
         if(_jump != null)
             _jump.OnJump += PlayerIsJump;
         _attack = FindAnyObjectByType<Attack>();
         if (_attack != null)
             _attack.Attacked += PlayerAttacked;
+        _deathManager = FindAnyObjectByType<PlayerDeathManager>();
+        if (_deathManager != null)
+            _deathManager.PlayerDeath += PlayerDeath;
     }
 
 
     private void Update()
     {
-        _animator.SetBool("IsGround", _jump.IsGrounded);
+        _animator.SetBool("IsGround", _jump.IsGrounded());
     }
     private void PlayerIsRunning(bool isRunning)
     {
@@ -51,5 +55,9 @@ public class PlayerAnimation : MonoBehaviour
                 _animator.SetTrigger("IsAttack2");
                 break;
         }
+    }
+
+    private void PlayerDeath() {
+        _animator.SetTrigger("IsDeath");
     }
 }

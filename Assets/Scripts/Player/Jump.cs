@@ -1,54 +1,42 @@
 using System;
 using UnityEngine;
 
-public class Jump : MonoBehaviour, IJump
+public class VariableJump : MonoBehaviour, IJump
 {
-    [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float maxHorizontalSpeed = 2f; // §®§Ñ§Ü§ã§Ú§Þ§Ñ§Ý§î§ß§Ñ§ñ §ã§Ü§à§â§à§ã§ä§î §á§à §Ô§à§â§Ú§Ù§à§ß§ä§Ñ§Ý§Ú §Ó§à §Ó§â§Ö§Þ§ñ §á§â§í§Ø§Ü§Ñ
+    //Component fields
+    private Rigidbody2D _rigidbody;
+    [SerializeField] private Transform _groundCheck;
+    [SerializeField] private LayerMask _layerMask;
 
-    private Rigidbody2D rb;
+    //general fields
+    private float _jumpVelocity = 6.5f;
+    private float _interruptingJump = 2f;
+    private float _groundCheckRadius = 0.4f;
     public event Action<bool> OnJump;
-    private bool isGrounded;
-    private bool wasGrounded;
-    private bool isFalling;
-    private float previousYPosition; // §¥§Ý§ñ §à§ä§ã§Ý§Ö§Ø§Ú§Ó§Ñ§ß§Ú§ñ §á§â§Ö§Õ§í§Õ§å§ë§Ö§Û §á§à§Ù§Ú§è§Ú§Ú y
-
-    public bool IsGrounded => isGrounded;
 
     void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
-        previousYPosition = transform.position.y; // §ª§ß§Ú§è§Ú§Ñ§Ý§Ú§Ù§Ñ§è§Ú§ñ §á§â§Ö§Õ§í§Õ§å§ë§Ö§Û §á§à§Ù§Ú§è§Ú§Ú y
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void Jump()
     {
-        HandleJump();
-    }
+        var jumpInput = Input.GetButtonDown("Jump");
+        var jumpInputReleased = Input.GetButtonUp("Jump");
 
-    public void HandleJump()
-    {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
-        float currentYPosition = transform.position.y;
-
-        if (currentYPosition < previousYPosition && rb.velocity.y < 0)
+        if (jumpInput && IsGrounded())
         {
-            //Debug.Log("§Á §á§Ñ§Õ§Ñ§ð");
-            isFalling = true;
-        }
-        previousYPosition = currentYPosition; // §°§Ò§ß§à§Ó§Ý§Ö§ß§Ú§Ö §á§â§Ö§Õ§í§Õ§å§ë§Ö§Û §á§à§Ù§Ú§è§Ú§Ú
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             OnJump?.Invoke(true);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpVelocity);
         }
-
-        // §°§Ô§â§Ñ§ß§Ú§é§Ú§Ó§Ñ§Ö§Þ §Ô§à§â§Ú§Ù§à§ß§ä§Ñ§Ý§î§ß§å§ð §ã§Ü§à§â§à§ã§ä§î §Ó§à §Ó§â§Ö§Þ§ñ §á§â§í§Ø§Ü§Ñ
-        if (!isGrounded)
+        if (jumpInputReleased && _rigidbody.velocity.y > 0)
         {
-            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed), rb.velocity.y);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y / _interruptingJump);
         }
+    }
+
+    public bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _layerMask);
     }
 }
