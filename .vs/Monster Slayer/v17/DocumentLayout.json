@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "D:\\UnityProject\\Monster Slayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|d:\\unityproject\\monster slayer\\assets\\scripts\\utilities\\dayandnightchanched.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\dayandnightchanched.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\enemies\\enemystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|d:\\unityproject\\monster slayer\\assets\\scripts\\managers\\playerdeathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\playerdeathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|d:\\unityproject\\monster slayer\\assets\\scripts\\enemies\\generalenemychaseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\generalenemychaseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\utilities\\dayandnightchanched.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\dayandnightchanched.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\animation\\playeranimationscripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\animation\\playeranimationscripts\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\enemies\\enemystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\enemies\\generalenemychaseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\generalenemychaseplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\managers\\playerdeathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\playerdeathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\healthobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\healthobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B888DC99-8822-E948-144E-236072D78316}|Assembly-CSharp.csproj|D:\\UnityProject\\Monster Slayer\\assets\\scripts\\player\\attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,34 +58,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DayAndNightChanched.cs",
-              "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
-              "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB8AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:48:13.68Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerAnimation.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Animation\\PlayerAnimationScripts\\PlayerAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Animation\\PlayerAnimationScripts\\PlayerAnimation.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Animation\\PlayerAnimationScripts\\PlayerAnimation.cs",
               "RelativeToolTip": "Assets\\Scripts\\Animation\\PlayerAnimationScripts\\PlayerAnimation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA1AAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T17:28:48.641Z",
               "EditorCaption": ""
@@ -93,43 +80,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerDeathManager.cs",
-              "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
-              "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:22:43.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "GeneralEnemyChasePlayer.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Enemies\\GeneralEnemyChasePlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\GeneralEnemyChasePlayer.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Enemies\\GeneralEnemyChasePlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\GeneralEnemyChasePlayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T12:50:53.884Z"
+              "WhenOpened": "2024-11-10T12:50:53.884Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "EnemyState.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Enemies\\EnemyState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemyState.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Enemies\\EnemyState.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemyState.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCoAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:21:10.374Z"
+              "WhenOpened": "2024-11-10T15:21:10.374Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerHealth.cs",
@@ -147,13 +123,13 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T15:20:44.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Movement.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Movement.cs",
@@ -165,19 +141,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Jump.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\Jump.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Jump.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\Jump.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Jump.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAhAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:19:46.034Z"
+              "WhenOpened": "2024-11-10T15:19:46.034Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "HealthObserver.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\HealthObserver.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HealthObserver.cs",
@@ -189,15 +166,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Dash.cs",
               "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\Dash.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Dash.cs",
               "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Player\\Dash.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Dash.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T15:19:15.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DayAndNightChanched.cs",
+              "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
+              "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DayAndNightChanched.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T17:48:13.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerDeathManager.cs",
+              "DocumentMoniker": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
+              "ToolTip": "D:\\UnityProject\\Monster Slayer\\Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlayerDeathManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T17:22:43.891Z"
             },
             {
               "$type": "Document",

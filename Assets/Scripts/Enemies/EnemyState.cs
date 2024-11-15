@@ -31,9 +31,10 @@ public class EnemyState : MonoBehaviour
         // _timeToNextPointChange = GetRandomTimeForChangedTargetPoint();
         // if (!_isWaitingForPointChange) StartCoroutine(ChangedSelectedPoint());
         //if(_rigidbody.velocity.x != )
+        float distanceToPlayer;
         if (CheckChaseCondition())
         {
-            _chasePlayer.FollowingPlayer();
+             _chasePlayer.FollowingPlayer();
         }
         else
         {
@@ -76,10 +77,10 @@ public class EnemyState : MonoBehaviour
         direction.Normalize();
 
         _hit = Physics2D.Raycast(transform.position, direction, distance, _layerMask);
-        //Debug.DrawRay(transform.position, direction * distance);
+        Debug.DrawRay(transform.position, direction * distance);
         //Debug.Log(_hit.collider.gameObject.name);
 
-        if (distance < _maxDistanceRange && distance > _minDistanceRange && _hit.collider.gameObject.name == "Player")
+        if (distance < _maxDistanceRange /*&& distance > _minDistanceRange*/ && _hit.collider.gameObject.name == "Player")
         {
             return true;
         }

@@ -9,9 +9,12 @@ public class PlayerAnimation : MonoBehaviour
     private PlayerDeathManager _deathManager;
     private const string _IS_RUNNING = "IsRunning";
     private const string _IS_JUMP = "IsJump";
+    private Rigidbody2D _rigidbody2D;
+    private bool _isFall = false;
 
     private void Start()
     {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponentInParent<Animator>();
         _movement = FindAnyObjectByType<Movement>();
         if (_movement != null)
@@ -31,6 +34,19 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         _animator.SetBool("IsGround", _jump.IsGrounded());
+        Vector3 vector3 = _rigidbody2D.velocity.normalized;
+        if (vector3.y < 0 && !_jump.IsGrounded() && !_isFall)
+        {
+            _animator.SetBool(_IS_JUMP, false);
+            _animator.SetBool("IsFall", true);
+            _isFall = true;
+        }
+        else
+        {
+            _animator.SetBool("IsFall", false);
+            _isFall = false;
+        }
+        
     }
     private void PlayerIsRunning(bool isRunning)
     {

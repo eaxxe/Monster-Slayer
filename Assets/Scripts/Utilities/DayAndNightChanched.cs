@@ -6,6 +6,7 @@ public class CameraColorChanger : MonoBehaviour
     private Camera mainCamera; 
     private string colorHexNight = "#1E131F";
     private string colorHexDay = "#9F988A";
+    [SerializeField, Range(5,15)] private float duration;
     private float deltaTime;
     [SerializeField, Range(10,60*7)]private float timeDay;
     [SerializeField, Range(10,60*6)]private float timeNight;
@@ -30,16 +31,15 @@ public class CameraColorChanger : MonoBehaviour
     void Update()
     {
         deltaTime -= Time.deltaTime;
-        Debug.Log(deltaTime);
         if (deltaTime < 0 && !isNight)
         {
-            StartCoroutine(ChangeCameraColor(colorHexNight, 6f));
+            StartCoroutine(ChangeCameraColor(colorHexNight, duration));
             deltaTime = timeNight;
             isNight = true;
         }
         if(deltaTime < 0 && isNight) 
         {
-            StartCoroutine(ChangeCameraColor(colorHexDay, 5f));
+            StartCoroutine(ChangeCameraColor(colorHexDay, duration));
             deltaTime = timeDay;
             isNight = false;
         }
