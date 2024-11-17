@@ -1,4 +1,4 @@
 public interface IJump
 {
-    void HandleJump();
+    void Jump();
 }

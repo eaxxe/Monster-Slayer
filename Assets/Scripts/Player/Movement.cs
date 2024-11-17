@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour, IMovement
 
     void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         if (rb == null)
         {
             Debug.LogError("Rigidbody2D not found on parent");
@@ -35,14 +35,7 @@ public class Movement : MonoBehaviour, IMovement
             if (moveInput > 0 && !facingRight) Flip();
             else if (moveInput < 0 && facingRight) Flip();
         }
-
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.LeftShift)) Slide();
-    }
-
-    private void Slide()
-    {
-        rb.velocity = new Vector2(rb.velocity.x * slideSpeed, rb.velocity.y);
     }
 
     private void Flip()

@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +8,8 @@ public class PlayerDeathManager : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
     private static PlayerDeathManager instance;
+    public event Action PlayerDeath;
+    private int count = 1;
     public static PlayerDeathManager Instance
     {
         get
@@ -53,9 +58,17 @@ public class PlayerDeathManager : MonoBehaviour
 
     private void HandlePlayerDeath()
     {
-        if (_playerHealth.CurrentHealth <= 0)
+        if (_playerHealth.CurrentHealth <= 0 && count == 1) 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerDeath?.Invoke();
+            count++;
+            StartCoroutine(ReloadScene());
         }
+    }
+
+    IEnumerator ReloadScene()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
